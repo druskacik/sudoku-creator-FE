@@ -1,0 +1,14 @@
+.menu {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+    margin-left: 0; /* To remove left indentation */
+    padding-left: 0; /* To remove left indentation */
+    list-style-type: none;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+  }
+  
+  .menu li {
+    display: inline;
+    padding-right: 1em;
+  }

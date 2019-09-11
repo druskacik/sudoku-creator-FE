@@ -1,0 +1,27 @@
+div {
+    text-align: center;
+}
+
+table {
+    border-collapse: collapse;
+    justify-content: center;
+    align-content: center;
+    margin: 0 auto;
+}
+
+
+td {
+    border: solid thin black;
+    height: 2.4em; 
+    width: 2.4em;
+    text-align: center; 
+    padding: 0;
+}
+
+colgroup, tbody {
+    border: solid medium black;
+}
+
+button {
+    margin-top: 1.2em;
+}
