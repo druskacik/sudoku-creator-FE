@@ -1,6 +1,6 @@
 export const readDatabase = () => {
     return (dispatch) => {
-        fetch('https://rocky-headland-25890.herokuapp.com/api/database', {
+        fetch('/api/database', {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',

@@ -17,6 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "proxy": "https://rocky-headland-25890.herokuapp.com",
   "eslintConfig": {
     "extends": "react-app"
   },
