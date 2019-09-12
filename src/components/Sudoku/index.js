@@ -8,9 +8,10 @@ const Sudoku = () => {
     const handleSudoku = async () => {
         const [puzzle, creationTime] = createSudoku();
         renderPuzzle(puzzle, creationTime);
-        fetch('/post-sudoku', {
+        fetch('https://rocky-headland-25890.herokuapp.com/post-sudoku', {
             method: 'POST',
             headers: new Headers({
+                'Access-Control-Allow-Origin': 'https://salty-mesa-67434.herokuapp.com',
                 'Content-Type': 'application/json',
                 Accept: 'application/json',
               }),
