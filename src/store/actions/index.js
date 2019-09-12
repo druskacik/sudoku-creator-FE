@@ -1,6 +1,12 @@
 export const readDatabase = () => {
     return (dispatch) => {
-        fetch('https://rocky-headland-25890.herokuapp.com/api/database')
+        fetch('https://rocky-headland-25890.herokuapp.com/api/database', {
+            method: 'GET',
+            headers: new Headers({
+                'Content-Type': 'application/json',
+                Accept: 'application/json',
+            })
+        })
             .then(res => res.json())
             .then(json => {
                 dispatch({
