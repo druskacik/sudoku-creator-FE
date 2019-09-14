@@ -16,7 +16,7 @@ class App extends Component {
           <Route path='/' exact component={Sudoku} />
           <Route path='/about' component={About} />
           <Route path='/database' component={Database} />
-          <Route path='/list' component={SudokuList} />
+          {/*<Route path='/list' component={SudokuList} />*/}
         </div>
       </Router>
     );

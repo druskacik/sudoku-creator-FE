@@ -3,7 +3,7 @@ import React from 'react';
 const Database = () => {
     return (
         <div>
-            Database component will render here
+            Coming soon. Working on it, boyz.
         </div>
     )
 }

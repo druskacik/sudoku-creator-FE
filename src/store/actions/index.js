@@ -1,6 +1,8 @@
+import config from '../../config';
+
 export const readDatabase = () => {
     return (dispatch) => {
-        fetch('/api/database', {
+        fetch(`${config.apiUrl}/api/database`, {
             method: 'GET',
             headers: new Headers({
                 'Content-Type': 'application/json',
