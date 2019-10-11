@@ -3,7 +3,7 @@ import React from 'react';
 const Database = () => {
     return (
         <div>
-            Coming soon. Working on it, boyz.
+            To see all sudokus ever created on this page, click <a href="/sudoku-database">here</a>
         </div>
     )
 }
