@@ -13,6 +13,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <Navbar />
+          <h2>This is HEROKU version of the page.</h2>
           <Route path='/' exact component={Sudoku} />
           <Route path='/about' component={About} />
           <Route path='/database' component={Database} />

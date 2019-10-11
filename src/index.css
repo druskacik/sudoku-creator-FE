@@ -1,6 +1,9 @@
 html {
-  display: table;
+  height: 100%;
+  display: flex;
+  vertical-align: top;
   margin: auto;
+  background-image: linear-gradient(white, gray);
 }
 
 body {
@@ -20,11 +23,15 @@ code {
 }
 
 @media only screen and (min-width: 601px) {
-  html {
+  /* html {
       width: 60vw;
   }
   body {
       width: 60vw;
+  } */
+
+  .App {
+    width: 60vw;
   }
 }
 
