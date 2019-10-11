@@ -1,9 +1,6 @@
 html {
-  height: 100%;
   display: flex;
-  vertical-align: top;
   margin: auto;
-  background-image: linear-gradient(white, gray);
 }
 
 body {
