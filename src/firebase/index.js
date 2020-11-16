@@ -1,6 +1,6 @@
 import firebase from 'firebase';
 
-const app = firebase.initializeApp({
+firebase.initializeApp({
   apiKey: process.env.FIREBASE_API_KEY,
   authDomain: "sudoku-creator.firebaseapp.com",
   databaseURL: "https://sudoku-creator.firebaseio.com",
