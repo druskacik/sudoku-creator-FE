@@ -3,23 +3,32 @@ import './style.css';
 import renderTable from './helpers/render/render-table';
 import renderPuzzle from './helpers/render/render-puzzle';
 import createSudoku from './helpers/create-sudoku';
-import config from '../../config';
+
+import database from '../../firebase';
 
 const Sudoku = () => {
     const handleSudoku = async () => {
         const [puzzle, creationTime] = createSudoku();
         renderPuzzle(puzzle, creationTime);
-        fetch(`${config.apiUrl}/api/post-sudoku`, {
-            method: 'POST',
-            headers: new Headers({
-                'Content-Type': 'application/json',
-                Accept: 'application/json',
-              }),
-            body: JSON.stringify({
-                puzzle,
+        let stringified = '';
+        for (let i = 0; i < 9; i += 1) {
+            for (let j = 0; j < 9; j += 1) {
+                stringified += puzzle[i][j] ? `${puzzle[i][j]}` : '.';
+            }
+        }
+
+        try {
+            const newSudoku = database.ref('/sudoku').push();
+            await newSudoku.set({
+                text: stringified,
                 creationTime,
-            }),
-        })
+            });
+            
+            // this will be the unique hash
+            console.log(newSudoku.key);
+        } catch (err) {
+            console.log(err);
+        }
     }
     return (
         <div>
